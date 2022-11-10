@@ -17,5 +17,8 @@ RSpec.describe CountWords do
             expect(count.count_words("This string is really very ridiculously long who talks like this honestly?")).to eq 12
         end
     
-    
+        it "If string is blank, return error advising blank string" do
+            count = CountWords.new
+            expect{count.count_words("")}.to raise_error "That string is blank!"
+        end
 end
