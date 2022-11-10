@@ -17,6 +17,8 @@ RSpec.describe Diary do
         it "String longer than 5 words, returns string then ..." do
             diary = Diary.new
             expect(diary.make_snippet("This is a longer string than before")).to eq "This is a longer string ..."
+            expect(diary.make_snippet("This is an even longer string than before yet again")).to eq "This is an even longer ..."
+            expect(diary.make_snippet("Strings can indeed be very long yes sir")).to eq "Strings can indeed be very ..."
         end
     
     context "No string entered"
