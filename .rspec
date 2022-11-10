@@ -1,1 +1,3 @@
---require spec_helper
+require spec_helper
+require format-documentation
+require fail-fast
