@@ -10,10 +10,11 @@ RSpec.describe Diary do
             diary = Diary.new
             expect(diary.make_snippet("This is a string")).to eq "This is a string"
         end
-
-    # Puts out fail message if string is empty
-    it 'If no entries found, returns "No entries"' do
-        diary = Diary.new
-        expect{diary.make_snippet('')}.to raise_error "No entries"
-    end
+    
+    context "Long string entered"
+        it "String longer than 5 words, returns string then ..." do
+            diary = Diary.new
+            expect(diary.make_snippet("This is a longer string than before")).to eq "This is a longer string ..."
+        end
+    
 end

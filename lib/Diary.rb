@@ -11,8 +11,8 @@ class Diary
             return string
         end
 
-        if arr.length = 0
-            return 'No entries'
+        if arr.length > 5
+            return arr[0..4].join(" ") + " ..."
         end
     end
 end
