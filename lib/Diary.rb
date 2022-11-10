@@ -7,6 +7,11 @@
 class Diary
     def make_snippet(string)
         arr = string.split
+
+        if arr.length == 0
+            raise "No string entered."
+        end
+
         if arr.length <= 5
             return string
         end
