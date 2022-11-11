@@ -20,10 +20,14 @@ RSpec.describe GrammarStats do
 
 
     context "Return a percentage"
-    it "Returns percentage" do
+    xit "Returns percentage" do
         gs = GrammarStats.new
-        gs.check("this shouldn't pass")
         gs.check("This should pass!")
-        expect(gs.percentage_good).to eq 50
+        gs.check("This should pass!")
+        gs.check("This should pass!")
+        gs.check("this shouldn't pass")
+        p gs.total
+        p gs.passed
+        expect(gs.percentage_good).to eq 75
     end
 end

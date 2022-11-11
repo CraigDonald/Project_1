@@ -26,22 +26,22 @@ class GrammarStats
     # Returns as an integer the percentage of texts checked so far that passed
     # the check defined in the `check` method. The number 55 represents 55%.
     @correct =  @passed.to_f / @total.to_f * 100.00
-    intcorrect = @correct.to_i
+    puts intcorrect = @correct.to_i
     puts intcorrect
   end
 end
 
 gs = GrammarStats.new
-#p gs
-#p gs.passed
-#p gs.total
+p gs
+p gs.passed
+p gs.total
 gs.check("This should pass!")
 gs.check("This should pass!")
 gs.check("This should pass!")
-#p gs.passed
-#p gs.total
+p gs.passed
+p gs.total
 gs.check("this shouldn't pass")
-#p gs.passed
-#p gs.total
+p gs.passed
+p gs.total
 
 gs.percentage_good
